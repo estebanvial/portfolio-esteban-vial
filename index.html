@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esteban Vial-Montpellier | Alternant Cybersécurité & Admin Réseau</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" id="scrollIndicator"></div>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">EVM</div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#experience">Expérience</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Changer le thème">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <a href="#" class="btn btn-primary btn-nav" onclick="downloadCV(event)">
+                    <i class="fas fa-download"></i> CV PDF
+                </a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1>Esteban Vial-Montpellier</h1>
+            <p class="subtitle">Alternant Cybersécurité & Administrateur Réseau</p>
+            <div class="typing-text" id="typingText"></div>
+            <div class="cta-buttons">
+                <a href="#about" class="btn btn-primary">
+                    <i class="fas fa-user"></i> Découvrir mon profil
+                </a>
+                <a href="#cv" class="btn btn-secondary">
+                    <i class="fas fa-file-alt"></i> Voir mon CV
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Me contacter
+                </a>
+                <div class="availability-badge">
+                    <span class="status-dot"></span>
+                    Disponible pour alternance Master
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="section fade-in">
+        <h2>À propos de moi</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Esteban Vial-Montpellier</h3>
+                    <p>20 ans • Strasbourg</p>
+                    <p><i class="fas fa-graduation-cap"></i> Bachelor AIS</p>
+                    <p><i class="fas fa-briefcase"></i> 3 ans d'expérience</p>
+                </div>
+            </div>
+            <div class="about-text">
+                <h3>Passionné par la cybersécurité et l'administration réseau</h3>
+                <p>Fraîchement diplômé d'un <strong>Bachelor AIS (Administrateur d'infrastructures sécurisées)</strong>, je possède une solide expérience de 3 ans en alternance dans l'administration des réseaux et des systèmes.</p>
+                <p>Actuellement à la recherche d'une <strong>alternance pour mon Master Cybersécurité</strong> (Bac+5), je souhaite approfondir mes compétences en sécurité informatique tout en continuant à exceller dans l'administration réseau.</p>
+                <p>Mes compétences techniques incluent la gestion de serveurs Linux/Windows, l'équipement réseau (Aruba, Fortinet, Mikrotik), la virtualisation et la supervision réseau. Mon objectif est de devenir un expert en cybersécurité capable de sécuriser et administrer des infrastructures complexes.</p>
+                <div style="margin-top: 1rem;">
+                    <span style="background: var(--primary-blue); padding: 0.3rem 1rem; border-radius: 20px; margin-right: 0.5rem;">Autonome</span>
+                    <span style="background: var(--light-blue); padding: 0.3rem 1rem; border-radius: 20px; margin-right: 0.5rem;">Curieux</span>
+                    <span style="background: var(--accent); color: var(--dark-bg); padding: 0.3rem 1rem; border-radius: 20px;">Adaptable</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="section fade-in">
+        <h2>Compétences techniques</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3><i class="fas fa-server"></i> Administration Système</h3>
+                <div class="skill-item">
+                    <span>Linux (Ubuntu, CentOS)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Windows Server</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>VMware / VirtualBox</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Docker</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3><i class="fas fa-network-wired"></i> Réseau & Infrastructure</h3>
+                <div class="skill-item">
+                    <span>Aruba Networks</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 45%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Fortinet (FortiGate)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Mikrotik</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>VPN / IPSec</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3><i class="fas fa-shield-alt"></i> Cybersécurité</h3>
+                <div class="skill-item">
+                    <span>Sécurisation Infrastructure</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 55%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Firewall Management</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Analyse de vulnérabilités</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Supervision (Grafana)</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Outils & Support</h3>
+                <div class="skill-item">
+                    <span>Helpdesk / Ticketing</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Synology NAS</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>PfSense</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span>Documentation technique</span>
+                    <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="section fade-in">
+        <h2>Parcours professionnel</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">Septembre 2023 - Août 2025</div>
+                <h3 class="timeline-title">Administrateur Réseau</h3>
+                <div class="timeline-company">NevaOne - En alternance</div>
+                <p>Administration complète de l'infrastructure réseau et systèmes de l'entreprise. Gestion de serveurs de virtualisation, administration Linux/Windows, maintenance du parc informatique et gestion de la hotline client.</p>
+                <ul style="margin-top: 1rem; color: var(--text-secondary);">
+                    <li>Gestion de serveurs VMware et administration multi-OS</li>
+                    <li>Configuration d'équipements Aruba, Fortinet, Mikrotik</li>
+                    <li>Gestion de services VPN et télécom</li>
+                    <li>Support technique niveau 2 et gestion de tickets</li>
+                </ul>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">Octobre 2022 - Août 2023</div>
+                <h3 class="timeline-title">Technicien Informatique</h3>
+                <div class="timeline-company">Web'in Informatique - En alternance</div>
+                <p>Support technique pour particuliers et professionnels. Réparation, montage d'ordinateurs de gaming et gestion d'inventaire.</p>
+                <ul style="margin-top: 1rem; color: var(--text-secondary);">
+                    <li>Diagnostic et réparation de matériel informatique</li>
+                    <li>Assemblage de configurations gaming sur mesure</li>
+                    <li>Conseil client et gestion de stock</li>
+                </ul>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-date">Septembre 2024 - Août 2025</div>
+                <h3 class="timeline-title">Bachelor AIS - Diplômé</h3>
+                <div class="timeline-company">IFIDE SUP'FORMATION</div>
+                <p>Formation spécialisée en administration d'infrastructures sécurisées. Pilotage de projets IT, analyse des besoins et mise en place de solutions adaptées.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="section fade-in">
+        <h2>Mes Projets</h2>
+        <div class="projects-grid">
+            
+            <!-- Projet 1 - Infrastructure Réseau -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="project-category">Infrastructure Réseau</div>
+                </div>
+                <h3>Modernisation Infrastructure NevaOne</h3>
+                <p>Refonte complète de l'infrastructure réseau avec mise en place d'une architecture sécurisée utilisant Fortinet et Aruba.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Fortinet FortiGate</span>
+                    <span class="tech-tag">Aruba Networks</span>
+                    <span class="tech-tag">VMware vSphere</span>
+                    <span class="tech-tag">VLAN</span>
+                </div>
+                <div class="project-stats">
+                    <div class="stat">
+                        <i class="fas fa-server"></i>
+                        <span>15 serveurs</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-users"></i>
+                        <span>50+ utilisateurs</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>99.9% uptime</span>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="#contact" class="btn btn-secondary btn-small">
+                        <i class="fas fa-envelope"></i> Discuter
+                    </a>
+                </div>
+            </div>
+
+            <!-- Projet 2 - Sécurisation -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon cybersec">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="project-category">Cybersécurité</div>
+                </div>
+                <h3>Audit de Sécurité & Durcissement</h3>
+                <p>Sécurisation d'une infrastructure local pour approfondire mes connaissances.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">PfSense</span>
+                    <span class="tech-tag">Fail2Ban</span>
+                    <span class="tech-tag">SSL/TLS</span>
+                </div>
+                <div class="project-stats">
+                    <div class="stat">
+                        <i class="fas fa-lock"></i>
+                        <span>Bloquage ip</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Sécurité +200%</span>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="#contact" class="btn btn-secondary btn-small">
+                        <i class="fas fa-envelope"></i> Discuter
+                    </a>
+                </div>
+            </div>
+
+            <!-- Projet 3 - Monitoring -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon monitoring">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-category">Supervision</div>
+                </div>
+                <h3>Plateforme de Monitoring Centralisée</h3>
+                <p>Déploiement d'une solution de supervision complète avec alerting en temps réel et dashboards personnalisés.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Grafana</span>
+                    <span class="tech-tag">Prometheus</span>
+                    <span class="tech-tag">InfluxDB</span>
+                </div>
+                <div class="project-stats">
+                    <div class="stat">
+                        <i class="fas fa-desktop"></i>
+                        <span>10 dashboards</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-bell"></i>
+                        <span>Alertes 24/7</span>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="#contact" class="btn btn-secondary btn-small">
+                        <i class="fas fa-envelope"></i> Discuter
+                    </a>
+                </div>
+            </div>
+
+            <!-- Projet 4 - Virtualisation -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon virtualization">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="project-category">Virtualisation</div>
+                </div>
+                <h3>Migration vers Infrastructure Virtualisée</h3>
+                <p>Migration complète des serveurs physiques vers un environnement virtualisé avec haute disponibilité.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">VMware vSphere</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">SAN Storage</span>
+                </div>
+                <div class="project-stats">
+                    <div class="stat">
+                        <i class="fas fa-database"></i>
+                        <span>12 VMs migrées</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-bolt"></i>
+                        <span>Performance +150%</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-money-bill-wave"></i>
+                        <span>Coûts -40%</span>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="#contact" class="btn btn-secondary btn-small">
+                        <i class="fas fa-envelope"></i> Discuter
+                    </a>
+                </div>
+            </div>
+
+            <!-- Projet 5 - Automatisation -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon automation">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-category">Automatisation</div>
+                </div>
+                <h3>Scripts d'Automatisation Système</h3>
+                <p>Développement de scripts pour automatiser les tâches d'administration et de maintenance système.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Bash</span>
+                    <span class="tech-tag">PowerShell</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Cron Jobs</span>
+                </div>
+                <div class="project-stats">
+                    <div class="stat">
+                        <i class="fas fa-code"></i>
+                        <span>10+ scripts</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-clock"></i>
+                        <span>Temps gagné 80%</span>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="#contact" class="btn btn-secondary btn-small">
+                        <i class="fas fa-envelope"></i> Discuter
+                    </a>
+                </div>
+            </div>
+
+            <!-- Projet 6 - Lab Personnel -->
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-icon personal">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="project-category">Lab Personnel</div>
+                </div>
+                <h3>HomeLab Cybersécurité</h3>
+                <p>Création d'un laboratoire personnel pour l'apprentissage et les tests de sécurité, pentesting et forensic.</p>
+                <div class="project-tech">
+                    <span class="tech-tag">Proxmox</span>
+                    <span class="tech-tag">Kali Linux</span>
+                    <span class="tech-tag">Metasploit</span>
+                    <span class="tech-tag">Wireshark</span>
+                </div>
+                <div class="project-stats">
+                    <div class="stat">
+                        <i class="fas fa-flask"></i>
+                        <span>15 VMs test</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Formation continue</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-search"></i>
+                        <span>Tests de pénétration</span>
+                    </div>
+                </div>
+                <div class="project-actions">
+                    <a href="#contact" class="btn btn-secondary btn-small">
+                        <i class="fas fa-envelope"></i> Discuter
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+    <!-- CV Section -->
+    <section id="cv" class="section fade-in">
+        <div class="cv-header">
+            <h2>Curriculum Vitae</h2>
+            <div class="cv-actions">
+                <button class="btn btn-primary" onclick="downloadCV(event)">
+                    <i class="fas fa-download"></i> Télécharger PDF
+                </button>
+                <button class="btn btn-secondary" onclick="printCV()">
+                    <i class="fas fa-print"></i> Imprimer
+                </button>
+            </div>
+        </div>
+        
+        <div class="cv-container" id="cvContainer">
+            <!-- En-tête CV -->
+            <div class="cv-section cv-header-section">
+                <div class="cv-personal">
+                    <h1>Esteban VIAL-MONTPELLIER</h1>
+                    <h2>Alternant en cybersécurité / Administrateur Système réseau</h2>
+                    <div class="cv-tags">
+                        <span class="cv-tag">Autonome</span>
+                        <span class="cv-tag">Curieux</span>
+                        <span class="cv-tag">Esprit d'équipe</span>
+                        <span class="cv-tag">Capacité d'adaptation</span>
+                        <span class="cv-tag">Sociable</span>
+                    </div>
+                </div>
+                <div class="cv-contact">
+                    <div class="cv-contact-item">
+                        <i class="fas fa-birthday-cake"></i>
+                        <span>20 ans - Permis de conduire</span>
+                    </div>
+                    <div class="cv-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>STRASBOURG (67)</span>
+                    </div>
+                    <div class="cv-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>esteban.vialmontpellier@gmail.com</span>
+                    </div>
+                    <div class="cv-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>06 41 58 70 84</span>
+                    </div>
+                    <div class="cv-contact-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Mobilité : IDF France</span>
+                    </div>
+                    <div class="cv-contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profil professionnel -->
+            <div class="cv-section">
+                <h3><i class="fas fa-user"></i> Profil professionnel</h3>
+                <p>Passionné par l’informatique, la cybersécurité et les nouvelles technologies, je possède une solide expérience en administration des réseaux et des
+systèmes. Diplômé d'un Bachelor AIS (Administrateur d'infrastructures sécurisées), j'ai acquis des compétences techniques en gestion de serveurs,
+sécurisation des infrastructures, support technique, et en gestion de projets IT. En parallèle, je nourris un fort intérêt pour la cybersécurité et je souhaite
+approfondir mes connaissances dans ce domaine. Sociable, autonome et doté d'un bon esprit d'analyse, je m'intègre facilement dans des équipes et
+m'adapte rapidement aux nouvelles situations. Mon objectif est de contribuer activement à des projets informatiques tout en développant mes
+compétences en cybersécurité et gestion de projets.
+</p>
+                
+                <div class="cv-alternance-info">
+                    <div class="alternance-details">
+                        <h4><i class="fas fa-graduation-cap"></i> Recherche d'alternance</h4>
+                        <p><strong>Rythme d'alternance :</strong> 1 semaine en formation / 3 semaines en entreprise</p>
+                        <p><strong>Eligible à la prime d'aide à l'apprentissage de 5000€</strong></p>
+                        <p><strong>Contact école :</strong> Laurie Forgeron, laurie.forgeron@livecampus.fr 07 56 28 93 69</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expériences professionnelles -->
+            <div class="cv-section">
+                <h3><i class="fas fa-briefcase"></i> Expériences</h3>
+                
+                <div class="cv-experience">
+                    <div class="cv-exp-header">
+                        <div class="cv-exp-title">
+                            <h4>Administrateur Réseau</h4>
+                            <span class="cv-company">NevaOne - Septembre 2023 - Août 2025</span>
+                        </div>
+                        <div class="cv-company-link">
+                            <a href="https://www.nevaone.fr/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Site web de l'entreprise
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cv-exp-content">
+                        <ul>
+                            <li>Gestion du service ticketing / hotline avec les clients</li>
+                            <li>Mise en place de solution de sauvegarde NAS</li>
+                            <li>Mise en place de service téléphique IP (3cx)</li>
+                            <li>Prie en main à distance de poste Windows / linux pour maintenance</li>
+                            <li>Installation d'équipements réseaux</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="cv-experience">
+                    <div class="cv-exp-header">
+                        <div class="cv-exp-title">
+                            <h4>Technicien informatique</h4>
+                            <span class="cv-company">Web'in Informatique - Octobre 2022 - Août 2023</span>
+                        </div>
+                        <div class="cv-company-link">
+                            <a href="https://www.webin.fr/" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Site web de l'entreprise
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cv-exp-content">
+                        <ul>
+                            <li>Réparation d'ordinateurs pour particuliers / pros</li>
+                            <li>Montage d'ordinateurs de gaming</li>
+                            <li>Gestion de l'inventaire</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formations -->
+            <div class="cv-section">
+                <h3><i class="fas fa-graduation-cap"></i> Formations</h3>
+                
+                <div class="cv-formation">
+                    <div class="cv-form-header">
+                        <h4>Mastère Cybersécurité</h4>
+                        <span class="cv-school">Livecampus (titre RNCP niveau 7 - Bac+5)</span>
+                        <span class="cv-date">Octobre 2025 à novembre 2027</span>
+                    </div>
+                    <p>Cette formation vise à former des professionnels capables de protéger les systèmes et les réseaux contre les menaces en ligne, à gérer les risques de sécurité et à mettre en œuvre des stratégies de sécurité efficaces.</p>
+                </div>
+
+                <div class="cv-formation">
+                    <div class="cv-form-header">
+                        <h4>Bachelor AIS (Administrateur d'infrastructures sécurisées)</h4>
+                        <span class="cv-school">IFIDE SUP'FORMATION (titre RNCP niveau 6 - bac+3)</span>
+                        <span class="cv-date">Septembre 2024 à août 2025</span>
+                    </div>
+                    <p>Le Bachelor AIS forme à piloter des projets informatiques, analyser les besoins d'une boîte et mettre en place des solutions adaptées.</p>
+                </div>
+
+                <div class="cv-formation">
+                    <div class="cv-form-header">
+                        <h4>BTS SIO</h4>
+                        <span class="cv-school">IFIDE SUP'FORMATION</span>
+                        <span class="cv-date">Septembre 2022 à août 2024</span>
+                    </div>
+                    <p>Formation BTS SIO option SISR, spécialisée dans l'administration des réseaux et des systèmes informatiques. Apprentissage de la gestion de serveurs, de la sécurité réseau et du support technique aux utilisateurs.</p>
+                </div>
+            </div>
+
+            <!-- Compétences -->
+            <div class="cv-section">
+                <h3><i class="fas fa-tools"></i> Compétences</h3>
+                
+                <div class="cv-skills-grid">
+                    <div class="cv-skill-category">
+                        <h4>Compétences techniques</h4>
+                        <ul>
+                            <li>Installation et configuration de machines virtuelles (VirtualBox, VMware, Docker)</li>
+                            <li>Support technique utilisateurs (helpdesk / assistance)</li>
+                            <li>Administration de serveurs Windows et Linux</li>
+                            <li>Équipement réseau : Aruba, Fortinet, TPlink, Microtik, Synology, PFsense</li>
+                            <li>Supervision réseau (Grafana, Prometheus...)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cv-skill-category">
+                        <h4>Compétences projet</h4>
+                        <ul>
+                            <li>Analyse des besoins utilisateurs</li>
+                            <li>Rédaction de documentation technique</li>
+                            <li>Gestion de projet IT</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cv-skill-category">
+                        <h4>Compétences générales</h4>
+                        <ul>
+                            <li>Travail en équipe et communication avec des profils techniques ou non techniques</li>
+                            <li>Sens de l'organisation et gestion des priorités</li>
+                            <li>Capacité à apprendre rapidement de nouveaux outils</li>
+                            <li>Résolution de problèmes informatiques</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="cv-skill-category">
+                        <h4>Langues</h4>
+                        <div class="cv-languages">
+                            <div class="cv-lang">
+                                <span class="flag">🇫🇷</span>
+                                <span>Français - Niveau : Courant</span>
+                            </div>
+                            <div class="cv-lang">
+                                <span class="flag">🇬🇧</span>
+                                <span>Anglais - Niveau : A2 - B1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Centres d'intérêt -->
+            <div class="cv-section">
+                <h3><i class="fas fa-heart"></i> Centres d'intérêt</h3>
+                <div class="cv-interests">
+                    <div class="cv-interest-category">
+                        <h4><i class="fas fa-tv"></i> Animation Japonaise</h4>
+                        <ul>
+                            <li>Animé</li>
+                            <li>Manga</li>
+                        </ul>
+                    </div>
+                    <div class="cv-interest-category">
+                        <h4><i class="fas fa-gamepad"></i> Jeu vidéo</h4>
+                        <ul>
+                            <li>Assassin creed</li>
+                            <li>Minecraft</li>
+                            <li>Overwatch</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer CV -->
+            <div class="cv-footer">
+                <div class="cv-footer-logo">
+                    <h4>Esteban VIAL-MONTPELLIER</h4>
+                    <p>Alternant en cybersécurité / Administrateur Système réseau</p>
+                </div>
+                <div class="cv-footer-contact">
+                    <p>📧 esteban.vialmontpellier@gmail.com | 📱 06 41 58 70 84</p>
+                    <p>📍 Strasbourg (67)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certifications Section -->
+    <section id="certifications" class="section fade-in">
+        <h2>Formations & Certifications</h2>
+        <div class="certifications-container">
+            
+            <!-- Formation actuelle -->
+            <div class="cert-category">
+                <h3><i class="fas fa-graduation-cap"></i> Formation en cours</h3>
+                <div class="cert-item current">
+                    <div class="cert-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h4>Mastère Cybersécurité</h4>
+                        <p class="cert-school">LiveCampus - RNCP Niveau 7 (Bac+5)</p>
+                        <p class="cert-date">Octobre 2025 - Novembre 2027</p>
+                        <p class="cert-description">Formation spécialisée en protection des systèmes, gestion des risques de sécurité et stratégies de cybersécurité.</p>
+                        <div class="cert-status searching">
+                            <i class="fas fa-search"></i> Recherche alternance active
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diplômes obtenus -->
+            <div class="cert-category">
+                <h3><i class="fas fa-certificate"></i> Diplômes obtenus</h3>
+                
+                <div class="cert-item completed">
+                    <div class="cert-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h4>Bachelor AIS - Administrateur d'infrastructures sécurisées</h4>
+                        <p class="cert-school">IFIDE SUP'FORMATION - RNCP Niveau 6 (Bac+3)</p>
+                        <p class="cert-date">Septembre 2024 - Août 2025</p>
+                        <p class="cert-description">Pilotage de projets informatiques, analyse des besoins et mise en place de solutions adaptées.</p>
+                        <div class="cert-status completed">
+                            <i class="fas fa-check-circle"></i> Diplômé avec succès
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-item completed">
+                    <div class="cert-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h4>BTS SIO - SISR</h4>
+                        <p class="cert-school">IFIDE SUP'FORMATION</p>
+                        <p class="cert-date">Septembre 2022 - Août 2024</p>
+                        <p class="cert-description">Spécialisation en administration des réseaux et des systèmes informatiques.</p>
+                        <div class="cert-status completed">
+                            <i class="fas fa-check-circle"></i> Obtenu
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section fade-in">
+        <h2>Contactez-moi</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3 style="color: var(--accent); margin-bottom: 1.5rem;">Informations de contact</h3>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>esteban.vialmontpellier@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>06 41 58 70 84</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Strasbourg (67)</span>
+                </div>
+                
+                <div style="margin-top: 2rem; padding: 1rem; background: rgba(0, 212, 255, 0.1); border-radius: 10px; border-left: 4px solid var(--accent);">
+                    <h4 style="color: var(--accent); margin-bottom: 0.5rem;">🎯 Recherche active</h4>
+                    <p><strong>Alternance Master Cybersécurité</strong></p>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Rythme: 1 semaine école / 3 semaines entreprise</p>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Eligible à la prime apprentissage de 5000€</p>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3 style="color: var(--accent); margin-bottom: 1.5rem;">Envoyez-moi un message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nom / Entreprise</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Envoyer le message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Esteban Vial-Montpellier. Tous droits réservés.</p>
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">Expert Cybersécurité & Administrateur Réseau • En recherche d'alternance</p>
+    </footer>
+    
+    <!-- Project Modals -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProjectModal()">&times;</span>
+            <div id="modalContent">
+                <!-- Le contenu sera injecté dynamiquement par JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Back to top button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="script.js"></script>
+</body>
+</html>
