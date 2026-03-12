@@ -35,7 +35,6 @@ function initializeTypingAnimation() {
         'Spécialiste Administration Réseau 🔧',
         'Futur Expert Cybersécurité 🛡️',
         '3 ans d\'expérience en alternance 💼',
-        'En recherche d\'alternance Master 🎯'
     ];
     
     let phraseIndex = 0;
@@ -214,7 +213,7 @@ function initializeCVDownload() {
         
         // Créer un lien de téléchargement
         const link = document.createElement('a');
-        link.href = './assets/CV_Esteban_Vial-Montpellier.pdf'; // Chemin vers votre CV
+        link.href = './assets/CV_Esteban_Vial-Montpellier (4).pdf'; // Chemin vers votre CV
         link.download = 'CV_Esteban_Vial-Montpellier.pdf';
         link.style.display = 'none';
         
@@ -962,4 +961,5 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         }
     });
 });
+
 
